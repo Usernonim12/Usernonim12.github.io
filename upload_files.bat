@@ -30,7 +30,7 @@ if exist ".git" (
 
 REM Copy files dari source path
 echo Copying files dari %SOURCE_PATH%...
-xcopy "%SOURCE_PATH%\*" . /E /I /Y
+xcopy "%SOURCE_PATH%\*" . /E /I /Y /H
 
 REM Tampilkan files yang akan di-commit
 echo.
@@ -41,6 +41,14 @@ REM Add semua files
 echo.
 echo Adding files ke git...
 git add .
+
+REM Cek apakah ada perubahan untuk di-commit
+git diff --cached --quiet
+if %errorlevel%==0 (
+    echo Tidak ada perubahan untuk di-commit
+    pause
+    exit /b 0
+)
 
 REM Commit
 echo.

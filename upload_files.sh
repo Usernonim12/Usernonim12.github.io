@@ -35,7 +35,7 @@ fi
 
 # Copy files dari source path
 echo -e "${YELLOW}Copying files dari $SOURCE_PATH...${NC}"
-cp -rv "$SOURCE_PATH"/* .
+cp -rv "$SOURCE_PATH"/. .
 
 # Tampilkan files yang akan di-commit
 echo -e "${YELLOW}Files yang akan di-commit:${NC}"
@@ -44,6 +44,12 @@ git status --short
 # Add semua files
 echo -e "${YELLOW}Adding files ke git...${NC}"
 git add .
+
+# Cek apakah ada perubahan untuk di-commit
+if git diff --cached --quiet; then
+    echo -e "${YELLOW}Tidak ada perubahan untuk di-commit${NC}"
+    exit 0
+fi
 
 # Commit
 echo -e "${YELLOW}Committing dengan message: $COMMIT_MESSAGE${NC}"
