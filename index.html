@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadeza Shop - Toko Smartphone Terpercaya</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo"><i class="fas fa-mobile-alt"></i> Hadeza Shop</div>
+        <div class="nav-menu" id="navMenu">
+          <ul>
+            <li><a href="#beranda" class="nav-link">Beranda</a></li>
+            <li><a href="#produk" class="nav-link">Produk</a></li>
+            <li><a href="#tentang" class="nav-link">Tentang</a></li>
+            <li><a href="#kontak" class="nav-link">Kontak</a></li>
+          </ul>
+        </div>
+        <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Beranda -->
+      <section id="beranda" class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Hadeza Shop</h1>
+          <p class="hero-subtitle">
+            Temukan Smartphone Pilihan dengan Harga Terbaik
+          </p>
+          <button class="cta-button" onclick="scrollToSection('produk')">
+            Lihat Produk <i class="fas fa-arrow-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Produk -->
+      <section id="produk" class="products-section">
+        <div class="section-header">
+          <h2>Produk Terbaru</h2>
+          <p>Pilihan smartphone terbaik untuk kebutuhan Anda</p>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- Produk 1 -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img
+                src="./id-galaxy-a14-sm-a145-sm-a145fdrvxid-535387980.avif"
+                alt="Samsung Galaxy A14"
+                class="product-image"
+              />
+              <span class="product-badge">Terpopuler</span>
+            </div>
+            <div class="product-info">
+              <h3>Samsung Galaxy A14</h3>
+              <p class="product-spec">
+                Layar 6.6" • RAM 4GB • Baterai 5000mAh
+              </p>
+              <p class="product-description">
+                Smartphone dengan performa stabil dan layar besar yang cocok untuk penggunaan harian dan hiburan.
+              </p>
+              <div class="product-footer">
+                <button class="btn-detail" onclick="showDetails('Samsung Galaxy A14', 'Layar 6.6 inci FHD+, RAM 4GB, Storage 128GB, Kamera 50MP, Baterai 5000mAh')">
+                  Lihat Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 2 -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img
+                src="./redmi-note-12-4g.jpg"
+                alt="Xiaomi Redmi Note 12"
+                class="product-image"
+              />
+              <span class="product-badge">Unggulan</span>
+            </div>
+            <div class="product-info">
+              <h3>Xiaomi Redmi Note 12</h3>
+              <p class="product-spec">
+                Layar AMOLED • Kamera 50MP • Performa Mantap
+              </p>
+              <p class="product-description">
+                Dilengkapi layar AMOLED yang memukau dan kamera 50MP untuk hasil foto yang jernih dan detail.
+              </p>
+              <div class="product-footer">
+                <button class="btn-detail" onclick="showDetails('Xiaomi Redmi Note 12', 'Layar 6.7 inci AMOLED, RAM 6GB, Storage 128GB, Kamera 50MP, Baterai 5000mAh')">
+                  Lihat Detail
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 3 -->
+          <div class="product-card">
+            <div class="product-image-wrapper">
+              <img src="./oppo-a58-4g.jpg" alt="Oppo A58" class="product-image" />
+              <span class="product-badge">Rekomendasi</span>
+            </div>
+            <div class="product-info">
+              <h3>Oppo A58</h3>
+              <p class="product-spec">
+                Desain Elegan • Pengisian Cepat • Kamera Bagus
+              </p>
+              <p class="product-description">
+                Memiliki desain yang elegan dengan fast charging dan kamera yang sempurna untuk media sosial.
+              </p>
+              <div class="product-footer">
+                <button class="btn-detail" onclick="showDetails('Oppo A58', 'Layar 6.5 inci IPS, RAM 4GB, Storage 128GB, Kamera 50MP, Baterai 5000mAh, Fast Charge 33W')">
+                  Lihat Detail
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang -->
+      <section id="tentang" class="about-section">
+        <div class="about-content">
+          <h2>Tentang Hadeza Shop</h2>
+          <p>
+            Hadeza Shop adalah platform terpercaya untuk menemukan informasi lengkap tentang smartphone terbaru. Kami menyediakan ulasan jujur, spesifikasi akurat, dan rekomendasi yang sesuai dengan kebutuhan Anda.
+          </p>
+          <div class="about-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Produk Terpilih</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Harga Kompetitif</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Layanan Terpercaya</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontak -->
+      <section id="kontak" class="contact-section">
+        <div class="section-header">
+          <h2>Hubungi Kami</h2>
+          <p>Siap membantu Anda menemukan smartphone yang tepat</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hadezabusiness@gmail.com">hadezabusiness@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-instagram"></i>
+            <div>
+              <h4>Instagram</h4>
+              <a href="https://instagram.com/hadeza_shop" target="_blank">@hadeza_shop</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/628XXXXXXXXXX">+62 XXX-XXXX-XXXX</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Hadeza Shop. Semua hak dilindungi.</p>
+    </footer>
+
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDetails"></p>
+        <button class="btn-close-modal" onclick="closeModal()">Tutup</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+    <footer>
+      <p>&copy; 2026 | Daftar Smartphone</p>
+    </footer>
+  </body>
+</html>
